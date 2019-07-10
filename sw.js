@@ -1,3 +1,3 @@
 addEventListener('fetch', ev => {
-    return new Response('OJJK');
+    ev.waitUntil(new Response('OJJK'));
 });
