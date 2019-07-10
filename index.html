@@ -12,12 +12,12 @@
 <body>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js').then(reg => {
+            navigator.serviceWorker.register('sw.js').then(reg => {
                 console.log('Registration succeeded. Scope is ' + reg.scope);
             });
 
             addEventListener('activate', ev => {
-                fetch('https://baidu.com').then(res => {
+                fetch('abc.txt').then(res => {
                     document.writeln(res);
                 })
             })
