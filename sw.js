@@ -1,4 +1,5 @@
-self.addEventListener('fetch', ev => {
-    console.log('Handling fetch event for', event.request.url);
-    ev.respondWith(new Response('OJJK'));
+this.addEventListener('fetch', function (event) {
+    event.respondWith(
+        new Response('Hello world!')
+    );
 });
