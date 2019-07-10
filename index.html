@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Service worker Test</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
 </head>
 
 <body>
@@ -17,9 +17,9 @@
             });
 
             addEventListener('activate', ev => {
-                $.ajax('abc.txt', res => {
+                fetch('/abc.txt').then(res => {
                     document.writeln(res);
-                });
+                })
             })
         } else {
             document.writeln('您所用的浏览器不支持离线访问。');
