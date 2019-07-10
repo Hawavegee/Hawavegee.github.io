@@ -1,3 +1,3 @@
 addEventListener('fetch', ev => {
-    ev.responseWith(new Response('OJJK'));
+    ev.respondWith(new Response('OJJK'));
 });
