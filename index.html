@@ -16,7 +16,7 @@
                 console.log('Registration succeeded. Scope is ' + reg.scope);
             });
 
-            addEventListener('activated', ev => {
+            addEventListener('activate', ev => {
                 $.ajax('abc.txt', res => {
                     document.writeln(res);
                 });
